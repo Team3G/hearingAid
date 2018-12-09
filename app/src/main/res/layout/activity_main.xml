@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fontFamily="@font/square"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp">
+
+        </LinearLayout>
+
+        <!-- 그림 있는 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/mainimage"
+                android:layout_width="190dp"
+                android:layout_height="168dp" />
+            <TextView
+                android:id="@+id/welcomeText"
+                android:textColor="#404040"
+                android:gravity="center"
+                android:fontFamily="@font/square"
+                android:text="환영합니다 ㅇㅇㅇ님"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 버튼 있는-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <!--대화하기-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/talkLinear"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:src="@drawable/talkingicon"/>
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/square"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:text="대화하기"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 변조하기-->
+            <LinearLayout
+                android:id="@+id/modulateLinear"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:src="@drawable/beaticon"/>
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/square"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:text="변조하기"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <!--읽어주기-->
+            <LinearLayout
+                android:id="@+id/readingLinear"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:src="@drawable/readingicon"/>
+                <TextView
+                    android:fontFamily="@font/square"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:text="읽어주기"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--설정-->
+            <LinearLayout
+                android:id="@+id/settingLinear"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:src="@drawable/settingicon"/>
+                <TextView
+                    android:fontFamily="@font/square"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:text="설정"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <TabHost
+        android:visibility="gone"
+        android:id="@+id/tabhost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 고정 메뉴 -->
+            <LinearLayout
+                android:gravity="center_vertical|center"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+                    <TextView
+                        android:id="@+id/menu_text"
+                        android:textSize="16dp"
+                        android:text="대화하기"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/setting_img"
+                        android:src="@drawable/setting2"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ede4fd"
+                android:padding="16dp"
+                android:layout_weight="1">
+
+
+                <!-- 읽어주기 -->
+                <LinearLayout
+                    android:padding="16dp"
+                    android:id="@+id/tab3"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <Button
+                            android:text="카메라로 텍스트 찍기"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp" />
+
+                        <Button
+                            android:text="텍스트 불러오기"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <!-- 실시간 대화 탭-->
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FF00FF00"
+                    android:id="@+id/warning"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_gravity="center"
+                        android:text="시작하기"
+                        android:textSize="24dp"
+                        android:id="@+id/StartStopButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="28dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/txtView"
+                        android:layout_height="wrap_content"
+                        android:text="주파수가 표시됩니다"/>
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+                </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <!-- 변조하기 -->
+                <LinearLayout
+                    android:padding="16dp"
+                    android:id="@+id/tab2"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/play"
+                        android:layout_gravity="center"
+                        android:text="시작하기"
+                        android:textSize="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="28dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주파수가 표시됩니다"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+                </LinearLayout>
+
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

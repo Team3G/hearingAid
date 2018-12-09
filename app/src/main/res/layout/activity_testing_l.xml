@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestingActivity_L"
+    android:orientation="vertical"
+    android:background="#4970ce">
+
+    <LinearLayout
+        android:layout_margin="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:src="@drawable/ear_l"
+            android:layout_width="160dp"
+            android:layout_height="160dp" />
+
+
+        <TextView
+            android:layout_marginTop="24dp"
+            android:textSize="24dp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:text="왼쪽부터 시작합니다."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="24dp"
+        android:gravity="bottom|center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/beforeBtn"
+            android:background="#222222"
+            android:textColor="#ffffff"
+            android:text="안들려요"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:background="#222222"
+            android:textColor="#ffffff"
+            android:text="들려요"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

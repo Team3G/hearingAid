@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RealtimeTalkActivity"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 고정 메뉴 -->
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/backicon"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:fontFamily="@font/square"
+                android:textColor="#28292a"
+                android:id="@+id/menu_text"
+                android:textSize="18sp"
+                android:text="메인페이지"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <!-- 읽어주기 -->
+    <LinearLayout
+        android:id="@+id/defaultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:fontFamily="@font/square"
+                android:text="카메라로 텍스트 찍기"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:id="@+id/camera_load"/>
+
+            <Button
+                android:fontFamily="@font/square"
+                android:text="텍스트 불러오기"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:id="@+id/file_load"/>
+        </LinearLayout>
+
+        <!-- 표시할 텍스트 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+            <TextView
+                android:textSize="25sp"
+                android:fontFamily="@font/nmbold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/fileList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

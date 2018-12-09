@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RealtimeTalkActivity"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 고정 메뉴 -->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/backicon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                <TextView
+                    android:fontFamily="@font/square"
+                    android:textColor="#28292a"
+                    android:id="@+id/menu_text"
+                    android:textSize="18sp"
+                    android:text="메인페이지"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    <!-- 실시간 대화 탭-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+            <Button
+                android:fontFamily="@font/square"
+                android:layout_gravity="center"
+                android:text="시작하기"
+                android:textSize="24dp"
+                android:id="@+id/StartStopButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF00FF00"
+                android:id="@+id/warning"
+                android:orientation="vertical">
+                <TextView
+                    android:fontFamily="@font/square"
+                    android:layout_gravity="center"
+                    android:textColor="#b3b3b3"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txtView"
+                    android:layout_height="wrap_content"
+                    android:text="주파수가 표시됩니다"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>

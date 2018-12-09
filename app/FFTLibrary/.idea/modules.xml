@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FFTLibrary.iml" filepath="$PROJECT_DIR$/FFTLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../audio-analyzer-for-android-master.iml" filepath="$PROJECT_DIR$/../audio-analyzer-for-android-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../audioSpectrumAnalyzer/audioSpectrumAnalyzer.iml" filepath="$PROJECT_DIR$/../audioSpectrumAnalyzer/audioSpectrumAnalyzer.iml" />
+    </modules>
+  </component>
+</project>

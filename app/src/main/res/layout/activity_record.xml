@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 고정 메뉴 -->
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/backicon"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:fontFamily="@font/square"
+                android:textColor="#28292a"
+                android:id="@+id/menu_text"
+                android:textSize="18sp"
+                android:text="메인페이지"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/userNameText"
+                android:fontFamily="@font/square"
+                android:textSize="24dp"
+                android:gravity="center"
+                android:text="박진숙님의 결과"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TabHost
+            android:id="@+id/tabhost1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <!--왼쪽 귀-->
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#ffffff"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TableRow
+                                        android:background="#f4e9ff">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="시  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_a_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#fee5ff">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="도  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_b2_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ffe5ec">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="도# "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_b_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="X"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ffe8e7">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="레  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_c_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ffede4">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="미b"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_c2_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="X"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#fff1e5">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="미  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_d_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#fff7e5">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="파  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_e2_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#faf5de">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="파#"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_e_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#f2ffe1">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="솔  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_f_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ebffe3">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="솔#"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_f2_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ddfff4">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="라  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_g_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:background="#ddf7ff">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="라#"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_g2_left"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+
+                                </TableLayout>
+                            </ScrollView>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--오른쪽 귀-->
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:background="#FFFFFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#ffffff"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TableRow
+                                        android:background="#f4e9ff">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="시  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_a_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#fee5ff">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="도"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_b2_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ffe5ec">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="도#"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_b_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="X"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ffe8e7">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="레  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_c_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ffede4">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="미b"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_c2_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="X"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#fff1e5">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="미  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_d_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#fff7e5">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="파  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_e2_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#faf5de">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="파#"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_e_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#f2ffe1">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="솔  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_f_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ebffe3">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="솔#"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_f2_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:background="#ddfff4">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="라  "
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_g_right"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:background="#ddf7ff">
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="라#"
+                                            android:textSize="28dp"/>
+                                        <TextView
+                                            android:fontFamily="@font/square"
+                                            android:id="@+id/text_g_right2"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:text="O"
+                                            android:textSize="28dp"/>
+                                    </TableRow>
+
+
+                                </TableLayout>
+                            </ScrollView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+
+</LinearLayout>
